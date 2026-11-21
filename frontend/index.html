@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surabaya Route Finder</title>
+
+    <link rel="stylesheet"
+          href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+</head>
+<body>
+
+<div id="sidebar">
+
+    <h2>Route Finder</h2>
+
+    <p>
+    Click on the map:
+    <br>
+    1st click = Start Point
+    <br>
+    2nd click = Destination
+    </p>
+    
+    <label>Start Latitude</label>
+    <input id="startLat" value="-7.2795">
+
+    <label>Start Longitude</label>
+    <input id="startLon" value="112.7900">
+
+    <label>Destination Latitude</label>
+    <input id="endLat" value="-7.2825">
+
+    <label>Destination Longitude</label>
+    <input id="endLon" value="112.7865">
+
+    <button id="routeBtn">
+        Find Route
+    </button>
+
+    <button id="currentLocationBtn">
+        Use Current Location
+    </button>
+
+    <button id="resetBtn">
+        Reset Points
+    </button>
+
+    <hr>
+
+    <div id="result">
+
+        Distance:
+        <span id="distance">
+            -
+        </span>
+
+        <br><br>
+
+        Time:
+        <span id="time">
+            -
+        </span>
+
+    </div>
+
+</div>
+
+<div id="map"></div>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<script src="js/map.js"></script>
+<script src="js/api.js"></script>
+<script src="js/ui.js"></script>
+
+</body>
+</html>
